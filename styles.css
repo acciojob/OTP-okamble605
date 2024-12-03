@@ -1,7 +1,6 @@
-/*  your css code here. If applicable */
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,67 +8,68 @@ body {
   margin: 0;
 }
 
-.otp-container {
-  background: #fff;
-  padding: 20px;
+.verification-container {
+  background: white;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 300px;
+  width: 350px;
 }
 
 h2 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 p {
   font-size: 14px;
   color: #666;
+  margin-bottom: 20px;
 }
 
-.otp-form {
+.verification-form {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.otp-input {
+.code-input {
   width: 40px;
-  height: 40px;
+  height: 50px;
   text-align: center;
   font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border 0.3s;
 }
 
-.otp-input:focus {
+.code-input:focus {
   border-color: #007BFF;
   outline: none;
 }
 
-.verify-btn {
+.separator {
+  width: 10px;
+}
+
+.verify-button {
   background: #007BFF;
-  color: #fff;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.verify-btn:hover {
+.verify-button:hover {
   background: #0056b3;
 }
 
-.resend {
+.note {
   font-size: 12px;
-  color: #666;
-}
-
-.resend a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.resend a:hover {
-  text-decoration: underline;
+  color: #999;
+  margin-top: 10px;
 }

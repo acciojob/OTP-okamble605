@@ -1,6 +1,5 @@
-//your JS code here. If required.
-// Automatically focus the next input when a digit is entered
-const inputs = document.querySelectorAll('.otp-input');
+// Autofocus logic
+const inputs = document.querySelectorAll('.code-input');
 
 inputs.forEach((input, index) => {
   input.addEventListener('input', () => {
@@ -10,7 +9,7 @@ inputs.forEach((input, index) => {
   });
 
   input.addEventListener('keydown', (e) => {
-    if (e.key === 'Backspace' && index > 0 && input.value.length === 0) {
+    if (e.key === 'Backspace' && index > 0 && input.value === '') {
       inputs[index - 1].focus();
     }
   });
