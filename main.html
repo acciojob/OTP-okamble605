@@ -1,104 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verify Your Account</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f5f5f5;
-      margin: 0;
-      text-align: center;
-    }
-
-    .verification-container {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 300px;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
-
-    .otp-inputs {
-      display: flex;
-      justify-content: space-between;
-      margin: 20px 0;
-    }
-
-    .otp-inputs input {
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      text-align: center;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-    }
-
-    .note {
-      font-size: 12px;
-      color: #777;
-    }
-  </style>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-  <div class="verification-container">
-    <h2 id="verification_heading">Verify Your Account</h2>
-    <p id="verification_subtext">We emailed you the six-digit code to <strong>acciojob@email.com</strong></p>
-    <p>Enter the code below to confirm your email address.</p>
-
-    <div class="otp-inputs">
-      <input type="text" maxlength="1" id="otp1" readonly>
-      <input type="text" maxlength="1" id="otp2" readonly>
-      <input type="text" maxlength="1" id="otp3" readonly>
-      <input type="text" maxlength="1" id="otp4" readonly>
-      <input type="text" maxlength="1" id="otp5" readonly>
-      <input type="text" maxlength="1" id="otp6" readonly>
-    </div>
-
-    <p class="note">This is a design-only project. We can't actually send emails as we don't have your email address.</p>
-  </div>
-
-  <script>
-    // Function to generate a random OTP
-    function generateOTP() {
-      let otp = '';
-      for (let i = 0; i < 6; i++) {
-        otp += Math.floor(Math.random() * 10);  // Generate a random digit
-      }
-      return otp;
-    }
-
-    // Display the random OTP in the OTP input fields
-    function displayOTP() {
-      const otp = generateOTP();
-      document.getElementById('otp1').value = otp.charAt(0);
-      document.getElementById('otp2').value = otp.charAt(1);
-      document.getElementById('otp3').value = otp.charAt(2);
-      document.getElementById('otp4').value = otp.charAt(3);
-      document.getElementById('otp5').value = otp.charAt(4);
-      document.getElementById('otp6').value = otp.charAt(5);
-    }
-
-    // Call displayOTP when the page loads
-    window.onload = displayOTP;
-  </script>
+	<!-- the entire body must be written by student -->
+	<h2 id="verification_heading">Verify Your Account</h2>
+	<p id="verification_subtext">We emailed you six digit code to acciojob@email.com Enter the code below to confirm your email address.</p>
+    <div id="code" class="code-container">
+	<input type="text" name="code-1" id="code-1" class="code" maxlength="1" autofocus>
+	<input type="text" name="code-2" id="code-2" class="code" maxlength="1">
+	<input type="text" name="code-3" id="code-3" class="code" maxlength="1">
+	<input type="text" name="code-4" id="code-4" class="code" maxlength="1">
+	<input type="text" name="code-5" id="code-5" class="code" maxlength="1">
+	<input type="text" name="code-6" id="code-6" class="code" maxlength="1">
+	</div>
+	<script type="text/javascript" src="./script.js">
+</script>
 
 </body>
+
 </html>

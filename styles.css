@@ -1,5 +1,6 @@
-.otp-inputs input:focus {
-  border-color: #007BFF;
-  background-color: #e6f7ff;
-  outline: none;
+.code{
+	width:20px;
+	height:20px;
+	margin: 10px ;
+	
 }
