@@ -1,95 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTP Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            color: #555;
-        }
-        .code-container {
-            display: flex;
-            gap: 10px;
-        }
-        .code {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            font-size: 1.5rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-        }
-        .code:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-        }
-    </style>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="verification_heading">Verify Your Account</h1>
-    <p id="verification_subtext">We emailed you the six-digit code to acciojob@email.com. Enter the code below to confirm your email address.</p>
-    <div class="code-container">
-        <input type="text" class="code" maxlength="1">
-        <input type="text" class="code" maxlength="1">
-        <input type="text" class="code" maxlength="1">
-        <input type="text" class="code" maxlength="1">
-        <input type="text" class="code" maxlength="1">
-        <input type="text" class="code" maxlength="1">
-    </div>
-    <small class="info">
-        This is design only. We didn't actually send you an email as we don't have your email, right?
-    </small>
-    <script>
-        const inputs = document.querySelectorAll('.code');
-
-        inputs.forEach((input, index) => {
-            input.addEventListener('input', (e) => {
-                if (e.target.value.length > 0 && index < inputs.length - 1) {
-                    inputs[index + 1].focus();
-                }
-            });
-
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Backspace' && e.target.value === '' && index > 0) {
-                    inputs[index - 1].focus();
-                }
-            });
-
-            input.addEventListener('paste', (e) => {
-                const data = e.clipboardData.getData('text');
-                const values = data.split('').slice(0, inputs.length);
-
-                values.forEach((char, idx) => {
-                    if (inputs[idx]) {
-                        inputs[idx].value = char;
-                    }
-                });
-
-                if (values.length > 0 && inputs[values.length - 1]) {
-                    inputs[values.length - 1].focus();
-                }
-
-                e.preventDefault();
-            });
-        });
-    </script>
+	<div class="container">
+		<h2>Verify Your Account</h2>
+		<p>
+			We emailed you the six-digit code to acciojob@email.com. Enter the code below to confirm your email address. <br />
+		</p>
+		<div class="code-container">
+			<input
+				type="number"
+				class="code"
+				placeholder="0"
+				min="0"
+				max="9"
+				readonly
+				required
+			/>
+			<input
+				type="number"
+				class="code"
+				placeholder="0"
+				min="0"
+				max="9"
+				readonly
+				required
+			/>
+			<input
+				type="number"
+				class="code"
+				placeholder="0"
+				min="0"
+				max="9"
+				readonly
+				required
+			/>
+			<input
+				type="number"
+				class="code"
+				placeholder="0"
+				min="0"
+				max="9"
+				readonly
+				required
+			/>
+			<input
+				type="number"
+				class="code"
+				placeholder="0"
+				min="0"
+				max="9"
+				readonly
+				required
+			/>
+			<input
+				type="number"
+				class="code"
+				placeholder="0"
+				min="0"
+				max="9"
+				readonly
+				required
+			/>
+		</div>
+		<small class="info">
+			This is design only. We didn't actually send you an email as we don't have your email, right?
+		</small>
+	</div>
+	<script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
